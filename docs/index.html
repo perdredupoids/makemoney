@@ -10,17 +10,17 @@
         <meta name="description" content="">
     
         <!-- Bootstrap core CSS -->
-        <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap.min.css" rel="stylesheet">
         <!-- Custom fonts for this template -->
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-        <link href="/static/css/style.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <meta property="og:title" content="Жми сюда!">
+        <meta property="og:title" content="Click here">
         <meta property="og:type" content="website">
         
-        <meta property="og:description" content="Переходи по ссылке">
+        <meta property="og:description" content="Click to link">
         
-        <meta property="og:image" content="//l.jusl.ru/files/5db9694bd3d39802ca5dcad8/07d74b15-27ba-46b6-873a-10e961ff71a0.jpg">
+        
     <style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
     @keyframes caretBlink {
         from { opacity: 1.0; }
@@ -199,19 +199,22 @@
     </style></head>
 <body>
 
-    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '271594684534394'); // Insert your pixel ID here.
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=271594684534394&ev=PageView&noscript=1"/></noscript>
-    
-    
-    
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '<?=$_GET["fbpixel"]?>');
+    fbq('track', 'Lead');
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=<?=$_GET["fbpixel"]?>&ev=Lead&noscript=1"
+  /></noscript>
     <script type="text/javascript">
         function click_btn(yandex_metrika_target, fb_pixel_target) {
             
@@ -276,7 +279,7 @@
                         <div class="soc-href-card soc-href-card-tg">
                             <div class="row">
                               <div class="col-lg-4 col-md-4 col-3 card-img">
-                                <img src="/static/img/ic_tg.png" alt="">
+                                <img src="img/ic_tg.png" alt="">
                               </div>
                               <div class="col-lg-8 col-md-8 col-9 card-name">
                                 <div class="row align-items-center" style="height: 100%;">
